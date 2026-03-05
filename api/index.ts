@@ -1,7 +1,6 @@
 import { google } from "googleapis";
-import type { VercelRequest, VercelResponse } from "@vercel/node";
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+export default async function handler(req: any, res: any) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
@@ -49,17 +48,3 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(500).json({ success: false, message: "Server error. Please try again." });
   }
 }
-```
-
-4. Commit the file.
-
----
-
-**Step 3 — Your repo should now look like this:**
-```
-api/
-  index.ts       ← serverless function
-index.html
-package.json
-tsconfig.json
-vercel.json
