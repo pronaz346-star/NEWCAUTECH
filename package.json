@@ -1,0 +1,13 @@
+{
+  "name": "cau-tech-summit-26",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "googleapis": "^171.4.0",
+    "@vercel/node": "^3.0.0"
+  },
+  "devDependencies": {
+    "typescript": "~5.8.2",
+    "@types/node": "^22.0.0"
+  }
+}
